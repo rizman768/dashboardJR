@@ -15,10 +15,10 @@ use \App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('FCpendapatan');
 });
 
-Route::get('/FCpendapatan', [DashboardController::class, 'pendapatan']);
+Route::get('/FCpendapatan', [DashboardController::class, 'pendapatan'])->name('dashboard');
 Route::get('/prediksiMenunggak', [DashboardController::class, 'menunggak']);
 Route::get('/prediksiMenunggak/penggunabaru', [DashboardController::class, 'menunggak2']);
 Route::get('/prediksiKecelakaan', [DashboardController::class, 'kecelakaan']);
